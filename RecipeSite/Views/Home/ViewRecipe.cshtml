@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View Recipe</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/css/recipestyler.css" />
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a asp-action="Index">Home</a>
+            <a asp-action="RecipeList">Recipe List</a>
+            <a asp-action="AddRecipe">Add Recipes</a>
+            <a class="active">View Recipes</a>
+            <a asp-action="ReviewRecipe">Reviews</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>Recipe List</h1>
+    </div>
+</body>
+</html>
