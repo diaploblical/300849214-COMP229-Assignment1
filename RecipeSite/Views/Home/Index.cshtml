@@ -1,9 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -13,19 +8,9 @@
     <link rel="stylesheet" href="css/recipestyler.css" />
 </head>
 <body>
-    <div class="navbar">
-        <nav>
-            <a class="active">Home</a>
-            <a asp-action="RecipeList">Recipe List</a>
-            <a asp-action="AddRecipe">Add Recipes</a>
-            <a asp-action="ViewRecipe">View Recipes</a>
-            <a asp-action="ReviewRecipe">Reviews</a>
-        </nav>
-    </div>
     <div class="text-center">
         <img src="images/logo.png" alt="Logo" /> 
         <h1>Welcome to The Recipe Repository!</h1>
-        <h2>@ViewBag.Greeting World (from the view)</h2> 
     </div>
 </body>
 </html>

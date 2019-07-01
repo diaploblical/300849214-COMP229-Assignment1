@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a asp-action="Index">Home</a>
+            <a asp-action="AddRecipe">Add Recipes</a>
+            <a asp-action="RecipeList">Recipe List</a>
+            <a asp-action="ViewRecipe">View Recipes</a>
+            <a asp-action="ReviewRecipe">Reviews</a>
+        </nav>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,8 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
+﻿@model IEnumerable<RecipeSite.Models.Recipe>
 <!DOCTYPE html>
 
 <html>
@@ -13,18 +9,24 @@
     <link rel="stylesheet" href="/css/recipestyler.css" />
 </head>
 <body>
-    <div class="navbar">
-        <nav>
-            <a asp-action="Index">Home</a>
-            <a class="active">Recipe List</a>
-            <a asp-action="AddRecipe">Add Recipes</a>
-            <a asp-action="ViewRecipe">View Recipes</a>
-            <a asp-action="ReviewRecipe">Reviews</a>
-        </nav>
-    </div>
     <div class="content">
-        <h1>Recipe List</h1>
-        <h2>In this page we can view a list of the added recipes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (RecipeSite.Models.Recipe r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.Category</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>  
 </body>
 </html>

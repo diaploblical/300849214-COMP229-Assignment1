@@ -1,0 +1,19 @@
+﻿@model RecipeSite.Models.Recipe
+
+<form asp-action="AddRecipe" method="Post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Name">Recipe Name</label>
+        <input asp-for="Name" />
+        <label asp-for="Ingredients">Ingredients</label>
+        <input asp-for="Ingredients" />
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" />
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" />
+    </div>
+    <div>
+        <button type="submit">Submit Recipe</button>
+        <button asp-action="Index">Cancel</button>
+    </div>
+</form>

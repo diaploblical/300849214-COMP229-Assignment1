@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RecipeSite.Models;
 
 namespace RecipeSite.Controllers
 {
@@ -16,11 +17,25 @@ namespace RecipeSite.Controllers
         }
         public ViewResult RecipeList()
         {
-            return View();
+            return View(TempRepository.Recipes);
         }
+        [HttpGet]
         public ViewResult AddRecipe()
         {
             return View();
+        }
+        [HttpPost]
+        public ViewResult AddRecipe(Recipe recipe)
+        {
+            if (ModelState.IsValid)
+            {
+                TempRepository.RecipeAdd(recipe);
+                return View();
+            }
+            else
+            {
+                return View();
+            }
         }
         public ViewResult ViewRecipe()
         {
